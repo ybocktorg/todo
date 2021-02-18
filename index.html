@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/todo.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="appHeader">
+        <h1>To Do App</h1>
+        <form id="itemCreateForm">
+          <input
+            id="inputTxt"
+            type="text"
+            placeholder="task or item ..."
+            autocomplete="off"
+          />
+          <button onSubmit="creatItem()">
+            <span class="material-icons">add</span>
+          </button>
+        </form>
+        <span id="msg">The input is empty, Please add a new task or item</span>
+      </div>
+      <h2 id="listTitle"><span>Need to do </span><span class="material-icons">
+        get_app
+        </span></h2>
+<div id="appBody">
+      
+      <ul id="toDoList"></ul>
+    </div>
+</div>
+    <script src="js/todo.js"></script>
+  </body>
+</html>

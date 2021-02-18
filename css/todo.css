@@ -1,0 +1,190 @@
+#app {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin: auto;
+  height:calc(100vh - 30px);
+}
+
+@media all and (min-width:922px){
+  #app {
+  max-width: 50%;
+  }
+}
+
+@media all and (min-width:1366px){
+  #app {
+  max-width: 30%;
+  }
+}
+
+#appHeader{
+  /* background:rgba(255,99,71,0.6); */
+  /* background:rgba(135, 206, 250,0.9); */
+  background: #eee;
+  font-family: 'Reggae One', cursive;
+  padding:0 1rem  0.75rem;
+  border-radius: 7px;
+}
+
+#appHeader h1{
+color: #ccc;
+}
+
+#appHeader form {
+  display: flex;
+}
+#appHeader form input{
+flex:1;
+border: 1px solid #fff;
+padding: 0 0.5rem;
+margin-right:0.5rem;
+}
+
+#appHeader form input:focus{
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+#appHeader form button{
+  /* background: rgb(19 19 70); */
+  background: #bbb;
+  border-radius: 4px;
+  border-width:0;
+  cursor: pointer;
+  }
+  #appHeader form button span{
+    color:#fff;
+    font-weight: 900;
+    vertical-align: middle;
+
+  }
+
+#msg{
+  display: none;
+  color: #bbb;
+  font-family: 'Roboto', sans-serif;
+  margin:0.5rem 0 0;
+}
+#appBody{
+  display: flex;
+  flex-flow: column;
+overflow-y: auto;
+}
+
+
+
+
+
+#appBody
+#toDoList{flex:1}
+
+h2#listTitle{
+  display: flex;
+  align-items: flex-end;
+  background: #eee;
+  font-family: 'Reggae One', cursive;
+  padding:0.25rem 0.5rem;
+  color: #555;
+  margin:0.5rem 0 2px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-size: 18px;
+}
+h2#listTitle span:last-child{
+  margin:0 0.5rem
+}
+
+#toDoList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#toDoList li {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 4px;
+  margin-top: 2px;
+  background: #eee;
+  padding: 5px 8px 5px 10px;
+}
+
+#toDoList li button{
+  cursor: pointer;
+}
+
+#toDoList li::before {
+  position: relative;
+  /* content: "\e86c"; */
+
+  display: block;
+  left: -5px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 24px;
+  /* background: red;
+  color: white; */
+  margin: auto;
+  font-family: "Material Icons";
+}
+
+#toDoList li.inactive::before {
+  content: "\e86c"; /* check circle */
+  color: #ccc;
+}
+
+#toDoList li.active::before {
+  content: "\e85d"; /* assignment */
+  /* content: "\e15d"; 
+  remove circle */
+  color: #555;
+}
+
+#toDoList li span.item {
+  padding-top: 4px;
+  cursor: pointer;
+  display: block;
+  flex: 1;
+  line-height: 20px;
+}
+
+#toDoList li #editInput{
+  background: #fff !important;
+  line-height: 20px;
+  flex:1;
+  border: 1px solid #fff;
+  margin:auto;
+  margin-right:0.5rem;
+}
+#toDoList li #editInput:focus{
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+
+
+
+#toDoList li.inactive span.item {
+  text-decoration: line-through;
+  /* background: green; */
+  margin: 0 5px 0 0;
+  /* text-decoration: underline; */
+}
+#toDoList li .save,
+#toDoList li .edit,
+#toDoList li .delete {
+  cursor: pointer;
+  /* outline;   */
+  border: 1px solid #ddd;
+  background: #ccc;
+  color: dark-red;
+  border-radius: 4px;
+}
+#toDoList li .edit,
+#toDoList li .save {
+  color: #555;
+  margin-right: 5px;
+  margin-left: 5px;
+}
