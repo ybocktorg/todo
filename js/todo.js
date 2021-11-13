@@ -149,3 +149,5 @@ function updateItem(item, index){
         list.innerHTML = '';
         display();
 }
+
+// Nader is writing his code
